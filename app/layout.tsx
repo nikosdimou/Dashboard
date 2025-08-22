@@ -1,4 +1,5 @@
 
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 
@@ -14,8 +15,17 @@ export default function RootLayout({
     <html>
       <body>
       
-       
-        {children}
+         <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+      
+          
+      
         
       </body>
     </html>
